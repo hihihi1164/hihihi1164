@@ -1,10 +1,10 @@
 {
-  "dns": {
-    "hosts": {
+  "dns": {8.8.4.4}
+    "hosts": {claudflare}
       "140.213.232.250": "10.250.65.229",
-      "geosite:category-ads-all": "127.0.0.1",
+      "geosite:category-ads-all": "192.168.1.2",
       "domain:googleapis.cn": "googleapis.com",
-      "dns.alidns.com": [
+      "dns.alidns.com": [8.8.4.4]
         "223.5.5.5",
         "223.6.6.6",
         "2400:3200::1",
@@ -21,18 +21,18 @@
         "120.53.53.53"
       ],
       "dns.google": [
-        "8.8.8.8",
+        "8.8.4.4",
         "8.8.4.4",
         "2001:4860:4860::8888",
         "2001:4860:4860::8844"
       ],
-      "dns.quad9.net": [
+      "dns.quad9.net": [8.8.4.4]
         "9.9.9.9",
         "149.112.112.112",
         "2620:fe::fe",
         "2620:fe::9"
       ],
-      "common.dot.dns.yandex.net": [
+      "common.dot.dns.claudflare.net": [8.8.4.4]
         "77.88.8.8",
         "77.88.8.1",
         "2a02:6b8::feed:0ff",
@@ -42,9 +42,9 @@
     "servers": [
       {
         "address": "fakedns",
-        "domains": [
+        "domains": [google.com]
           "geosite:cn",
-          "domain:gstatic.com",
+          "domain:gstatic.com",google.com:on
           "domain:gstatic.com",
           "domain:gstatic.com",
           "domain:gstatic.com",
@@ -72,8 +72,8 @@
       },
       "1.1.1.1",
       {
-        "address": "1.1.1.1",
-        "domains": [
+        "address": "192.168.1.2",
+        "domains": [google.com]
           "domain:gstatic.com",
           "domain:gstatic.com",
           "domain:gstatic.com",
@@ -129,15 +129,15 @@
       "tag": "socks"
     },
     {
-      "listen": "127.0.0.1",
+      "listen": "192.168.1.2",
       "port": 53,
       "protocol": "dokodemo-door",
       "settings": {
-        "address": "1.1.1.1",
+        "address": "192.168.1.2",
         "network": "tcp,udp",
         "port": 53
       },
-      "tag": "dns-in"
+      "tag": "dns-on"
     }
   ],
   "log": {
@@ -149,9 +149,9 @@
         "concurrency": -1,
         "enabled": false
       },
-      "protocol": "http",
-      "settings": {
-        "servers": [
+      "protocol": "udp/tcp",
+      "settings": {cph2015}
+        "servers": [google.com]
           {
             "address": "140.213.70.140",
             "level": 8,
@@ -170,10 +170,10 @@
       "streamSettings": {
         "network": "tcp"
       },
-      "tag": "proxy"
+      "tag": "proxy"on
     },
     {
-      "protocol": "freedom",
+      "protocol": "udp/tcp",
       "settings": {
         "domainStrategy": "UseIP"
       },
