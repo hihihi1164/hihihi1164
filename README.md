@@ -9,7 +9,25 @@
         "223.6.6.6",
         "2400:3200::1",
         "2400:3200:baba::1"
-      ],
+      ],"alamat ipnya": [192.168.1.2]
+          "192.168.1.2:192.168.1.1:133.0.6943.137"
+        ],
+        "jaringan": "UDP",
+       ": "proksi"[192.168.1.2]
+        "pelabuhan": "67:53:443",
+        "protokol": [udp]
+          "https://www.google.com"
+        ],
+        "tipe": "gagal"
+      Bahasa Indonesia:
+      {
+        "domain": [google.com]
+          "https://ip.private/port:53:67:443
+        ],
+        "alamat ipnya": [192.168.1.12
+          "140.213.232.250/192.168.1.2"
+        ],
+        "jaringan"axis.net/pribadi
       "one.one.one.one": [
         "1.1.1.1",
         "1.0.0.1",
