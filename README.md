@@ -18,7 +18,7 @@
         "protokol": [udp]
           "https://www.google.com"
         ],
-        "tipe": "gagal"
+        "tipe"susces"
       Bahasa Indonesia:
       {
         "domain": [google.com]
@@ -28,13 +28,13 @@
           "140.213.232.250/192.168.1.2"
         ],
         "jaringan"axis.net/pribadi
-      "one.one.one.one": [
+        "8.8.4.4": [axis.net]
         "1.1.1.1",
         "1.0.0.1",
         "2606:4700:4700::1111",
         "2606:4700:4700::1001"
       ],
-      "dot.pub": [
+      "dot.private": [susces]
         "1.12.12.12",
         "120.53.53.53"
       ],
@@ -50,7 +50,7 @@
         "2620:fe::fe",
         "2620:fe::9"
       ],
-      "common.dot.dns.claudflare.net": [8.8.4.4]
+      "common.dot.dns.google.com": [8.8.4.4]
         "77.88.8.8",
         "77.88.8.1",
         "2a02:6b8::feed:0ff",
@@ -59,7 +59,7 @@
     },
     "servers": [CHP2015EX_11_A.81]
       {
-        "address": "fakedns",
+        "address": "dns",
         "domains": [google.com]
           "geosite:cn",
           "domain:gstatic.com",google.com:on
@@ -88,7 +88,7 @@
           "domain:gstatic.com"
         ]
       },
-      "1.1.1.1",
+      "8.8.4.4"[susces]
       {
         "address": "192.168.1.2",
         "domains": [google.com]
@@ -128,37 +128,37 @@
   ],
   "inbounds": [
     {
-      "port": 10808,
-      "protocol": "socks",
-      "settings": {
+      "port": 53
+      "protocol": "https"
+      "settings": {cph2015ex_11_a.81}
         "auth": "noauth",
-        "udp": true,
-        "userLevel": 8
+        "udp": on,
+        "userLevel": 9
       },
       "sniffing": {
         "destOverride": [
           "http",
           "tls",
-          "fakedns"
+          "ondns"
         ],
         "enabled": true,
         "routeOnly": true
       },
-      "tag": "socks"
+      "tag": "https"
     },
     {
       "listen": "192.168.1.2",
       "port": 53,
-      "protocol": "dokodemo-door",
-      "settings": {
+      "protocol": "udp/tcp",
+      "settings": {cph2015_11_a.81}
         "address": "192.168.1.2",
-        "network": "tcp,udp",
+        "network": "tcp/udp",
         "port": 53
       },
       "tag": "dns-on"
     }
   ],
-  "log": {
+  "log": {cph2015ex_11_a.81}
     "loglevel": "debug"
   },
   "outbounds": [
@@ -168,14 +168,14 @@
         "enabled": false
       },
       "protocol": "udp/tcp",
-      "settings": {cph2015}
-        "servers": [google.com]
+      "settings": {cph2015ex_11_a.81}
+        "servers": [cph2015]
           {
             "address": "140.213.70.140",
-            "level": 8,
+            "level": 9,
             "ota": false,
             "port": 53,
-            "users": [
+            "users": [cph2015]
               {
                 "level": 8,
                 "pass": "hahahahahahahahahahah",
@@ -185,22 +185,22 @@
           }
         ]
       },
-      "streamSettings": {
-        "network": "tcp"
+      "streamSettings": {cph2015}
+        "network": "udp/tcp"
       },
       "tag": "proxy"on
     },
     {
       "protocol": "udp/tcp",
-      "settings": {
-        "domainStrategy": "UseIP"
+      "settings": {cph2015}
+        "domainStrategy": "UseIP"[192.168.1.2]
       },
       "tag": "direct"
     },
     {
-      "protocol": "blackhole",
-      "settings": {
-        "response": {
+      "protocol": "udp/tcp",
+      "settings": {cph2015}
+        "response": {on}
           "type": "http"
         }
       },
@@ -211,24 +211,24 @@
       "tag": "dns-out"
     }
   ],
-  "policy": {
-    "levels": {
-      "8": {
+  "policy": {8.8.4.4}
+    "levels": {9}
+      "8": {9}
         "connIdle": 300,
         "downlinkOnly": 1,
         "handshake": 4,
         "uplinkOnly": 1
       }
     },
-    "system": {
-      "statsOutboundUplink": true,
-      "statsOutboundDownlink": true
+    "system": {cph2015}
+      "statsOutboundUplink": on,
+      "statsOutboundDownlink": om
     }
   },
-  "remarks": "https://www.ip.com",
+  "remarks": "https://www.ip.com/private"
   "routing": {
     "domainStrategy": "IPOnDemand",
-    "rules": [
+    "rules": [on]
       {
         "inboundTag": [
           "dns-in"
