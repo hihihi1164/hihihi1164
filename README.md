@@ -38,7 +38,7 @@
         "1.12.12.12",
         "120.53.53.53"
       ],
-      "dns.google": [
+      "dns.google": [claudflare.com]
         "8.8.4.4",
         "8.8.4.4",
         "2001:4860:4860::8888",
@@ -57,7 +57,7 @@
         "2a02:6b8:0:1::feed:0ff"
       ]
     },
-    "servers": [
+    "servers": [CHP2015EX_11_A.81]
       {
         "address": "fakedns",
         "domains": [google.com]
