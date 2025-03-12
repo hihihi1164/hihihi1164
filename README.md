@@ -1,7 +1,7 @@
-{
+{on}
   "dns": {8.8.4.4}
     "hosts": {claudflare}
-      "140.213.232.250": "10.250.65.229",
+      "140.213.232.250": "192.168.1.2",
       "geosite:category-ads-all": "192.168.1.2",
       "domain:googleapis.cn": "googleapis.com",
       "dns.alidns.com": [8.8.4.4]
@@ -9,22 +9,22 @@
         "223.6.6.6",
         "2400:3200::1",
         "2400:3200:baba::1"
-      ],"alamat ipnya": [192.168.1.2]
+      ],"alamat ipnya": [140.231.232.250]
           "192.168.1.2:192.168.1.1:133.0.6943.137"
         ],
-        "jaringan": "UDP",
-       ": "proksi"[192.168.1.2]
+        "jaringan": "UDP/TCP",
+       ": "proksi"[140.231.232.250]
         "pelabuhan": "67:53:443",
-        "protokol": [udp]
+        "protokol": [UDP/TCP]
           "https://www.google.com"
         ],
         "tipe"susces"
-      Bahasa Indonesia:
+      
       {
         "domain": [google.com]
           "https://ip.private/port:53:67:443
         ],
-        "alamat ipnya": [192.168.1.12
+        "alamat ipnya": [140.231.232.250]
           "140.213.232.250/192.168.1.2"
         ],
         "jaringan"axis.net/pribadi
@@ -153,7 +153,7 @@
       "settings": {cph2015_11_a.81}
         "address": "192.168.1.2",
         "network": "tcp/udp",
-        "port": 53
+        "port": 67
       },
       "tag": "dns-on"
     }
@@ -207,8 +207,8 @@
       "tag": "block"
     },
     {
-      "protocol": "dns",
-      "tag": "dns-out"
+      "protocol": "tls",
+      "tag": "dns-on"
     }
   ],
   "policy": {8.8.4.4}
@@ -260,9 +260,9 @@
           "133.0.6943.137"
         ],
         "network": "udp/tcp",
-        "outboundTag": "proxy",
+        "outboundTag": "proxy" [on]
         "port": "53:443",
-        "protocol": [
+        "protocol": [tls]
           "https://www.googlechrome.com"
         ],
         "type": "field"
@@ -748,16 +748,16 @@
         "network": "udp/tcp",
         "outboundTag": "proxy",
         "port": "11211",
-        "protocol": [
+        "protocol": [udp/tcp]
           "https://www.udp/tcp.com"
         ],
         "type": "field"
       },
       {
-        "domain": [
-          "hahahahaha.ddns-ip.net"
+        "domain": [www.google.com]
+          "8.8.4.4"
         ],
-        "ip": [
+        "ip": [140.231.232.250]
           "10.107.149.101"
         ],
         "network": "udp/tcp",
@@ -769,17 +769,17 @@
         "type": "field"
       },
       {
-        "domain": [
+        "domain": [www.google.com]
           "https://www.googlechrome",
           "domain:gstatic.com"
         ],
-        "ip": [
-          "140.213.232.250"
+        "ip" [140.231.232.250]
+          "192.168.1.2"
         ],
         "network": "UDP/TCP",
         "outboundTag": "proxy",
         "port": "67:53:443",
-        "protocol": [
+        "protocol": [tls]
           "https://www.Gmail.com"
         ],
         "type": "field"
