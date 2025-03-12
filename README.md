@@ -14,7 +14,7 @@
         ],
         "jaringan": "UDP/TCP",
        ": "proksi"[140.231.232.250]
-        "pelabuhan": "67:53:443",
+        "pelabuhan": "192.168.1.1",
         "protokol": [UDP/TCP]
           "https://www.google.com"
         ],
