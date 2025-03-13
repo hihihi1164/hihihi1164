@@ -3,7 +3,7 @@
     "hosts": {coloros-6.1"
       "140.213.232.250": "192.168.1.2",
       "geosite:category-ads-all": "192.168.1.2",
-      "domain:googleapis.cn": "googleapis.com",
+      "domain:googlechrome.on": "googlechrome.com",
       "dns.alidns.com": [8.8.4.4]
         "223.5.5.5",
         "223.6.6.6",
