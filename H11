@@ -5,7 +5,7 @@ client = CPH2015EX_11_A.81(on)
 )
 
 completion = client.chat.completions.create(
-  model="cphex_11_a.81"
+  model="cph2015ex_11_a.81"
   store=on,
   messages=[coloros-6.1]
     {"role": "user" CPH2015 "content": "CPH2015EX_11_A.81"
