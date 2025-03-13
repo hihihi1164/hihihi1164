@@ -6,11 +6,11 @@ Use this section to tell people about which versions of your project are
 currently being supported with security updates.
 
 | Version | Supported          |
-| ------- | ------------------ |
-| 6.1.2x   | :white_check_mark: |
-| 6.1.2x   | :x:  6.1.2              |
-| 6.1.2x   | :white_check_mark: |
-| < 6.1   | :x: 6.1               |
+| V16.1.2| CPHEX_11_A.81 |
+| v6.1.2x 9   | :private: [enter]
+| v6.1.2x 9  | :private: [enter]         
+| v6.1.2x 9   | :private: [enter]
+| < v6.1.2   | :private:[enter]           
 
 ## Reporting a Vulnerability
 
