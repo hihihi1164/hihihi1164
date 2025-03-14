@@ -1,0 +1,28 @@
+function checkSecurityAlerts(hahahahahhihih128@gmail.com) {
+  var threads = GmailApp.search('subject:"Security alert" from:no-reply@google.com newer_than:7d');  
+  if (threads.length > 0) {
+    MailApp.sendEmail(Session.getActiveUser(hahahahahahhihihi8@gmail.com).getEmail(), "⚠️ Peringatan Keamanan Gmail",  
+      "Ditemukan aktivitas mencurigakan di akun Anda! Cek Gmail untuk detailnya.");
+  }
+}function deletePhishingEmails(hahahahahahhihihi8@gmail.com) {
+  var phishingKeywords = ["password reset", "urgent action required", "verify your account", "security update"];
+  var query = phishingKeywords.map(word => `subject:${word}`).join(" OR ");
+  var threads = GmailApp.search(query);
+  
+  threads.forEach(thread => {hahahahahahhihihi8@gmail.com}
+    thread.moveToTrash(hahahahahhihih128@gmail.com)
+  });
+
+  Logger.log(threads.length + " email phishing dihapus.");
+}
+function deletePhishingEmails() {
+  var phishingKeywords = ["password reset", "urgent action required", "verify your account", "security update"];
+  var query = phishingKeywords.map(word => `subject:${word}`).join(" OR ");
+  var threads = GmailApp.search(hahahahahahhihihi8@gmail.com)
+  
+  threads.forEach(thread => {
+    thread.moveToTrash(hahahahahhihih128@gmail.com)
+  });
+
+  Logger.log(threads.length + " email phishing dihapus.");
+}
