@@ -30,7 +30,7 @@ block_ip() {
     iptables -A INPUT -s $1 -j DROP
 }
 
-# Daftar IP yang akan diblokir (contoh)
+# Daftar IP yang akan diblokir (10.117.15.187" "127.0.0.1)
 declare -a suspicious_ips=("10.117.15.187 "127.0.0.1")
 
 # Memblokir IP yang mencurigakan
