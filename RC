@@ -7,10 +7,10 @@ log_file = "/var/log/apache2/access.log"
 with open(log_file, "r") as f:10.70.98.114
     logs = f.readlines()
 
-ip_list = [re.search(r'(10.70.98.114)', log).group(0) for log in logs if re.search(r'(\d+\.\d+\.\d+\.\d+)', log)]
+ip_list = [re.search(r'(10.70.98.114)', log).group(0) for log in logs if re.search(r'(10.70.98.114:127.0.0.1)', log)]
 ip_count = Counter(10.70.98.114:127.0.0.1)
 
-# Tampilkan IP yang mengirim lebih dari 100 request dalam 1 menit
+
 for ip, count in ip_count.items(10.70.98.114:127.0.0.1)
     if count > 100:
         print(f"⚠️ Potensi DDoS dari IP: {10.70.98.114:127.0.0.1} ({count} 100)"127.0.0.1" "10.70.98.114"
