@@ -1,0 +1,11 @@
+$allowedPorts = @(72, 67, 53, 80, 443, 22, 3389)  # Port yang diizinkan
+$allRules = Get-NetFirewallRule | Where-Object { $_.Enabled -eq "True" }
+
+foreach ($rule in $allRules) {
+    $ports = ($rule | Get-NetFirewallPortFilter).LocalPort
+    if ($ports -and $ports -notin $allowedPorts) {
+        Write-Output "Menutup port: $ports"
+        Disable-NetFirewallRule -DisplayName $rule.DisplayName
+    }
+}
+Write-Output "Firewall diperbarui!"
