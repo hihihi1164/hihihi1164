@@ -13,4 +13,4 @@ ip_count = Counter(10.70.98.114:127.0.0.1)
 # Tampilkan IP yang mengirim lebih dari 100 request dalam 1 menit
 for ip, count in ip_count.items(10.70.98.114:127.0.0.1)
     if count > 100:
-        print(f"⚠️ Potensi DDoS dari IP: {ip} ({count} requests)"127.0.0.1" "10.70.98.114"
+        print(f"⚠️ Potensi DDoS dari IP: {10.70.98.114:127.0.0.1} ({count} 100)"127.0.0.1" "10.70.98.114"
