@@ -1,9 +1,9 @@
 /bin/bash
 
 
-iptables -F
-iptables -X
-iptables -Z
+iptables -F INPUT ACCEPT
+iptables -X INPUT ACCEPT
+iptables -Z INPUT ACCEPT
 
 
 iptables -P INPUT DROP
