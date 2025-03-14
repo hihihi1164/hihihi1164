@@ -1,0 +1,1 @@
+obfsproxy --log-file=obfs.log --log-min-level=info obfs2 --dest=127.0.0.1:1194 server
