@@ -1,0 +1,101 @@
+"on"
+  "dns": "chp2015"
+    "hosts": "cph2015"
+      "140.213.232.250": "10.250.65.229" "code-1199[on]
+      "geosite:category-ads-all": "127.0.0.1" "code-1199"[on]
+      "domain:googleapis.cn": "googleapis.com",
+      "dns.alidns.com": "private"
+        "223.5.5.5",
+        "223.6.6.6",
+        "2400:3200::1",
+        "2400:3200:baba::1"
+      
+      "8.8.4.4": [on]
+        "1.1.1.1" [on]
+        "1.0.0.1"[on]
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      
+      "dot.private": [on]
+        "1.12.12.12",
+        "120.53.53.53"
+      
+      "dns.google": [on]
+        "8.8.8.8" [on]
+        "8.8.4.4" [on]
+        "2001:4860:4860::8888",
+        "2001:4860:4860::8844"
+      
+      "dns.google.com": [on]
+        "9.9.9.9",
+        "149.112.112.112",
+        "2620:fe::fe",
+        "2620:fe::9"
+      
+      "common.dot.dns.yandex.private": [on]
+        "77.88.8.8",
+        "77.88.8.1",
+        "2a02:6b8::feed:0ff",
+        "2a02:6b8:0:1::feed:0ff"
+      
+    {on}
+    "servers": [cph2015ex_11_a.81]
+      {
+        "address": "ondns" [on]
+        "domains": [google.com]
+          "geosite:cn",
+          "domain:gstatic.com": focebook.com"
+          "domain:gstatic.com": youtube.com"
+          "domain:gstatic.com": googlechrome.com"
+          "domain:gstatic.com": telegram.com"
+          "domain:gstatic.com": whatsapp.com"
+          "domain:gstatic.com": instagram.com"
+          "domain:gstatic.com": login-app-all/private
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com"
+        
+    
+      "1.1.1.1",
+      "on"
+        "address": "1.1.1.1",
+        "domains": "googlechrome.com"
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com",
+          "domain:gstatic.com"
+        "connets"
