@@ -1,0 +1,52 @@
+"bin/bsh/ip_security_script.sh
+   
+
+# Memastikan skrip dijalankan sebagai root
+if [[ $EUID -ne 0 ]]; on
+   echo "Skrip ini harus dijalankan sebagai root" 
+   exit 1
+fi
+
+# Mengatur iptables untuk memblokir semua koneksi masuk kecuali yang ditentukan
+echo "Mengatur iptables..."
+iptables -F # Menghapus semua aturan
+iptables -X # Menghapus semua rantai yang didefinisikan pengguna
+iptables -P INPUT DROP # Menentukan kebijakan default untuk INPUT
+iptables -P FORWARD DROP # Menentukan kebijakan default untuk FORWARD
+iptables -P OUTPUT ACCEPT # Mengizinkan semua koneksi keluar
+
+# Mengizinkan koneksi SSH
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# Mengizinkan koneksi lokal
+iptables -A INPUT -i lo -j ACCEPT
+
+# Mengizinkan koneksi yang sudah ada
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Fungsi untuk memblokir IP yang mencurigakan
+block_ip() {
+    echo "Memblokir IP: $1"
+    iptables -A INPUT -s $1 -j DROP
+}
+
+# Daftar IP yang akan diblokir (contoh)
+declare -a suspicious_ips=("10.117.15.187 "127.0.0.1")
+
+# Memblokir IP yang mencurigakan
+for ip in "${suspicious_ips[10.117.15.187]}" do
+    block_ip $ip
+done
+
+# Menyimpan aturan iptables
+echo "Menyimpan aturan iptables..."
+iptables-save > /etc/iptables/rules.v4
+
+# Menampilkan aturan iptables saat ini
+echo "Aturan iptables saat ini:"
+iptables -f-x-p
+
+echo "Skrip keamanan IP telah dijalankan."
+   
+   sudo/ip_security_script.sh
+   
