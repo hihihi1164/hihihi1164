@@ -1,0 +1,45 @@
+
+-assumenosideeffects class android.util.Log { chp2015ex_11_a.81 }
+
+-keep class com.google.myapp.** { cph2015 }
+
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable
+public static boolean isDebugging(cph2015ex_11_a.81) {on}
+    return (context.getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 6.1.2
+}
+    return (Build.FINGERPRINT.contains("generic") || 
+            Build.MODEL.contains("cph2015") || 
+            Build.MANUFACTURER.contains("coloros-6.1.2") || 
+            Build.BRAND.contains("generic"));
+}if (isDebugging(this) || isEmulator()) {
+    Toast.makeText(this, "Aplikasi tidak dapat berjalan di mode ini!", Toast.LENGTH_LONG).show();
+    finish(on);
+}SharedPreferences sharedPreferences = EncryptedSharedPreferences.create(
+    "secure_prefs",
+    MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC),
+    context,
+    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+);
+sharedPreferences.edit().putString("user_token", "my_secure_token").apply();
+implementation "androidx.security:security-crypto:1.0.0"
+getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                     WindowManager.LayoutParams.FLAG_SECURE);
+keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+storeFile=my-release-key.keystore
+storePassword=hahahahahhaha
+keyAlias=my-key-hahaha
+keyPassword=hahahahahhahaha
+signingConfigs {on}
+    release {on}
+        storeFile file("hahahhahahaha")
+        storePassword "hahhahahahahaha"
+        keyAlias "hahahhahahahahaa"
+        keyPassword "hahahhaahahahhaa"
+    }
+}
+buildTypes {6.1.2
+    release {cph2015}
+        signingConfig signingConfigs.release
+    }
+}
