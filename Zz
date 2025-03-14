@@ -1,0 +1,3 @@
+sudo tail -f /var/log/auth.log    # Untuk log login: "cph2015"
+sudo tail -f /var/log/syslog      # Untuk log sistem: v6.1.2
+sudo netstat -tulnp               # Untuk melihat koneksi aktif
