@@ -1,0 +1,14 @@
+sudo apt update
+sudo apt install dnsmasq hostapd
+
+iptables -t nat -A PREROUTING -p udp-tcp --dport 80, 22, 53, 67, -j DNAT --to-destination 192.168.1.2
+echo "Captive Portal Aktif. Semua koneksi HTTP diarahkan ke halaman login."
+
+sudo apt update
+sudo apt install git python3-venv -y
+git clone https://github.com/cowrie/cowrie.git
+cd cowrie
+python3 -m venv cowrie-env
+source cowrie-env/bin/activate
+pip install -r requirements.txt
+bin/cowrie start
