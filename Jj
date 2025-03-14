@@ -1,6 +1,6 @@
 # Blokir semua lalu lintas yang masuk kecuali yang diizinkan
 iptables -P INPUT DROP
-iptables -P FORWARD DROP
+iptables -P INPUT DROP
 iptables -P OUTPUT ACCEPT
 
 # Izinkan lalu lintas lokal
