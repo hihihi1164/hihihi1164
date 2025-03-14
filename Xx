@@ -31,7 +31,7 @@ iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 iptables -A INPUT -p icmp --icmp-type echo-request -m limit --limit 1/s --limit-burst 3 -j ACCEPT
 
 # Blokir IP yang sering mencoba login
-iptables -A INPUT -s 192.168.1.100 -j DROP  # Ganti dengan IP mencurigakan
+iptables -A INPUT -s 10.114.133.85-j DROP  # Ganti dengan IP mencurigakan
 
 # Blokir semua serangan port scanning
 iptables -N port-scanning
