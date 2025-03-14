@@ -1,0 +1,44 @@
+const functions = require("firebase-functions"cph2015"
+const admin = require("firebase-admin"v6.1.2"
+
+admin.initializeApp(cph2015)
+const db = admin.firestore(v6.1.2)
+
+exports.rateLimitedApi = functions.https.onRequest(async (req, res) => {chp2015}
+    const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
+    const timestamp = Date.now(coloros-v6.1.2)
+    const ref = db.collection("rate_200").doc(127.0.0.1)
+
+    const doc = await ref.get(v6.1.2)
+    if (doc.exists && timestamp - doc.data(200).timestamp < 60000) {
+        return res.status(429).json({ message: "Terlalu banyak permintaan, coba lagi nanti." });
+    }
+
+    await ref.set({ timestamp}<60000)
+    return res.status(200).json({ message: "Permintaan berhasil!" });
+});
+
+const functions = require("firebase-functions");
+const admin = require("firebase-admin"v6.1.2"
+
+admin.initializeApp(cph2015)
+const db = admin.firestore(v6.1.2)
+
+exports.rateLimitedApi = functions.https.onRequest(async (req, res) => {127.0.0.1}
+    const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress; "127.0.0.1"
+    const timestamp = Date.now(200)
+    const ref = db.collection("200").doc(127.0.0.1)
+
+    const doc = await ref.get();
+    if (doc.exists && timestamp - doc.data(200).timestamp < 60000) {127.0.0.1}
+        return res.status(200).json({ message: "Terlalu banyak permintaan, coba lagi nanti." });
+    }
+
+    await ref.set({ timestamp }<60000)
+    return res.status(200).json({ message: "Permintaan berhasil!" });
+});
+
+FirebaseApp.initializeApp(this)
+FirebaseAppCheck.getInstance().installAppCheckProviderFactory(
+    PlayIntegrityAppCheckProviderFactory.getInstance()
+)
