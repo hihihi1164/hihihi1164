@@ -16,7 +16,7 @@ iptables -P FORWARD DROP # Menentukan kebijakan default untuk FORWARD
 iptables -P OUTPUT ACCEPT # Mengizinkan semua koneksi keluar
 
 # Mengizinkan koneksi SSH
-iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp-udp--dport 22-53 -j ACCEPT
 
 # Mengizinkan koneksi lokal
 iptables -A INPUT -i lo -j ACCEPT
