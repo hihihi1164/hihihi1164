@@ -1,0 +1,20 @@
+# Blokir semua lalu lintas yang masuk kecuali yang diizinkan
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+
+# Izinkan lalu lintas lokal
+iptables -A INPUT -i lo -j ACCEPT
+
+# Izinkan koneksi yang sudah ada
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Izinkan SSH hanya dari IP tertentu (misalnya, 192.168.1.100)
+iptables -A INPUT -p tcp --dport 22 -s 192.168.1.2-j ACCEPT
+
+# Izinkan HTTP dan HTTPS
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+
+# Simpan aturan IPTables
+iptables-save > /etc/iptables.rules
