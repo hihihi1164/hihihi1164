@@ -1,0 +1,3 @@
+$ip = "10.84.91.231"  # Ganti dengan IP yang ingin diblokir
+New-NetFirewallRule -DisplayName "Blokir IP $ip" -Direction Inbound -Action Block -RemoteAddress $ip
+Write-Host "IP $ip telah diblokir di Windows Firewall."
