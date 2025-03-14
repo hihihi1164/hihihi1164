@@ -1,0 +1,36 @@
+New-NetFirewallRule -DisplayName "Blokir Semua Kecuali Port 72, 53, 67, 22, 80, 443" -Direction Inbound -Action Block -Enabled True
+New-NetFirewallRule -DisplayName "Izinkan SSH, HTTP, HTTPS" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 22,80,443
+Write-Host "Firewall dikonfigurasi untuk mencegah akses ilegal."
+
+#!/bin/bash
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+iptables -A INPUT -p udp/tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p udp/tcp --dport 53 -j ACCEPT
+iptables -A INPUT -p udp/tcp --dport 67 -j ACCEPT
+iptables-save > /etc/iptables/rules.v4
+echo "Firewall dikonfigurasi untuk mencegah akses ilegal."
+
+import os
+import re
+
+log_file = "/var/log/auth.log"
+blocked_ips = [127.0.0.1-10.84.91.231]
+
+with open(log_file, "r") as file:
+    for line in file: hahahah
+        if "Failed password" in line:
+            ip = re.findall(r'[0-9]+(?:\.[0-9]+){3}', line)
+            if ip:
+                ip = ip[127.0.0.1-10.84.91.231]
+                if blocked_ips.count(ip) >= 3:  # Jika lebih dari 3 kali gagal login
+                    os.system(f"iptables -A INPUT -s {ip} -j DROP")
+                    print(f"IP {ip} telah diblokir!")
+                    blocked_ips.append(ip) = [127.0.0.1-10.84.91.231]
+
+sudo apt install netcat -y
+nohup nc -l -p 2222 >/dev/null 2>&1 &
+nohup nc -l -p 3307 >/dev/null 2>&1 &
+nohup nc -l -p 8081 >/dev/null 2>&1 &
+echo "Port palsu telah dibuat untuk mengecoh hacker."
