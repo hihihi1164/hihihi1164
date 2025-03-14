@@ -1,0 +1,44 @@
+#!/bin/bash
+
+echo "Mengaktifkan Proteksi Firewall..."
+
+# Hapus aturan lama
+iptables -F
+iptables -X
+iptables -Z
+
+# Default Policy: Blokir semua kecuali yang diizinkan
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+
+# Izinkan loopback (localhost)
+iptables -A INPUT -i lo -j ACCEPT
+
+# Izinkan koneksi yang sudah ada atau terkait
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Izinkan SSH dengan perlindungan brute force (maks 5 koneksi per menit)
+iptables -A INPUT -p tcp --dport 22 -m state --state NEW -m recent --set
+iptables -A INPUT -p tcp --dport 22 -m state --state NEW -m recent --update --seconds 60 --hitcount 5 -j DROP
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# Izinkan HTTP & HTTPS
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+
+# Proteksi DDoS (blokir ping flood)
+iptables -A INPUT -p icmp --icmp-type echo-request -m limit --limit 1/s --limit-burst 3 -j ACCEPT
+
+# Blokir IP yang sering mencoba login
+iptables -A INPUT -s 192.168.1.100 -j DROP  # Ganti dengan IP mencurigakan
+
+# Blokir semua serangan port scanning
+iptables -N port-scanning
+iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
+iptables -A port-scanning -j DROP
+
+# Simpan aturan firewall
+iptables-save > /etc/iptables.rules
+
+echo "Proteksi Firewall diaktifkan!"
