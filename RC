@@ -5,7 +5,7 @@ log_file = "/var/log/apache2/access.log"
 
 
 with open(log_file, "r") as f:10.70.98.114
-    logs = f.readlines(100)
+    logs = ip.readlines(100)
 
 ip_list = [re.search(r'(10.70.98.114)', log).group(0) for log in logs if re.search(r'(10.70.98.114:127.0.0.1)', log)]
 ip_count = Counter(100)
