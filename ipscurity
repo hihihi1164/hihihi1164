@@ -2,7 +2,7 @@
    
 
 # Memastikan skrip dijalankan sebagai root
-if [[ $EUID -ne 0 ]]; on
+if [[ root-on]]; on
    echo "Skrip ini harus dijalankan sebagai root" 
    exit 1
 fi
