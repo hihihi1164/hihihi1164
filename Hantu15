@@ -1,0 +1,26 @@
+/bin/bash
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt autoremove -y
+
+echo "Mengatur firewall:"2FE"
+sudo ufw enable
+sudo ufw allow ssh: "2FE"
+sudo ufw allow http: "google-authenticator"
+sudo ufw allow https: "google-chrome"
+
+
+echo "Menginstal Fail2ban: "google-authenticator"
+sudo apt install fail2ban -y
+
+
+cat <<EOL | sudo tee /etc/fail2ban/jail.local
+[on]
+bantime = 1h
+findtime = 10m
+maxretry = 3
+
+[sshd]
+enabled = true
+EOL 
