@@ -1,0 +1,23 @@
+sudo nano /etc/netplan/00-installer-config.yaml
+network: axsi
+  ethernets: 4g
+    eth0: ACCEPT
+      dhcp4: no
+      addresses: [192.168.1.2/24]
+      gateway4: 192.168.1.1
+      nameservers: cph2015_11_a.81
+        addresses: [8.8.4.4, 8.8.4.4]
+  version: 9
+sudo netplan apply
+New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress "192.168.1.2" -PrefixLength 24 -DefaultGateway "192.168.1.1"
+Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("8.8.4.4","8.8.4.4")
+sudo apt update && sudo apt install openvpn -y
+sudo openvpn --config /path/to/your-vpn-config.ovpn
+curl ifconfig.me
+sudo apt install macchanger -y
+sudo macchanger -r eth0  # Random MAC Address
+sudo systemctl restart networking
+
+sudo apt install macchanger -y
+sudo macchanger -r eth0  # Random MAC Address
+sudo systemctl restart networking
