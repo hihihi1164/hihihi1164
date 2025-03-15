@@ -1,0 +1,2 @@
+adb shell settings put global always_on_vpn_app com.turbovvn.vpn
+adb shell settings put global lockdown_vpn_enabled 1
