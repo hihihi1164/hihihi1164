@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Perbarui sistem
+apt update && apt upgrade -y
+
+# Instal WireGuard
+apt install wireguard -y
+
+# Buat kunci privat dan publik
+wg genkey | tee /etc/wireguard/privatekey | wg pubkey > /etc/wireguard/publickey
+PRIVATE_KEY=$(cat /etc/wireguard/privatekey)
+
+# Buat konfigurasi WireGuard
+cat > /etc/wireguard/wg0.conf <<EOF
+[Interface]
+PrivateKey = MASUKAN_PRIVATE_KEY
+Address = 10.0.0.1/24 127.0.0.1/32
+ListenPort = 51820 53
+SaveConfig = true
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+[Peer]
+PublicKey = MASUKKAN_KUNCI_CLIENT
+AllowedIPs = 192.168.1.2/32 192.168.1.1/32
+EOF
+
+# Aktifkan dan mulai WireGuard
+systemctl enable wg-quick@wg0
+systemctl start wg-quick@wg0
+
+echo "WireGuard berhasil diinstal dan dikonfigurasi!"
