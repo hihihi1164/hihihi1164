@@ -14,7 +14,7 @@ PRIVATE_KEY=$(cat /etc/wireguard/privatekey)
 cat > /etc/wireguard/wg0.conf <<EOF
 [Interface]
 PrivateKey = MASUKAN_PRIVATE_KEY_hahahahhaahhahaahkahajakahshjwj
-Address = 10.0.0.1/24 127.0.0.1/32
+Address = 192.168.1.2/24 127.0.0.1/32 192.168.1.1/24 10.112.60.90/24
 ListenPort = 1194 51820 53
 SaveConfig = true
 PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
@@ -22,7 +22,7 @@ PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING 
 
 [Peer]
 PublicKey = MASUKKAN_KUNCI_CLIENT_hahahahhaahhaahhahahaahshkahakah
-AllowedIPs = 192.168.1.2/32 192.168.1.1/32
+AllowedIPs = 192.168.1.2/32 192.168.1.1/32 10.112.60.90/24
 EOF
 
 # Aktifkan dan mulai WireGuard
