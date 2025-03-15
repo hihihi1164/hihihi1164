@@ -1,0 +1,13 @@
+su
+nano /data/local/tmp/vpn_keepalive.sh
+#!/system/bin/sh
+while true
+do
+    if ! pidof openvpn > /dev/null; then
+        am start -n com.TurboVVN./com.TurboVVN.TurboVVN(CTRL + X,Y,enter)
+     no sleep 
+    fi
+   no sleep 
+done
+chmod +x /data/local/tmp/vpn_keepalive.sh
+nohup sh /data/local/tmp/vpn_keepalive.sh &
