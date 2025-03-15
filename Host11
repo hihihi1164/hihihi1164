@@ -1,0 +1,13 @@
+iptables -A INPUT -p tcp --dport 23 -j DROP
+iptables -A INPUT -p udp --dport 23 -j DROP
+iptables -A INPUT -p tcp --syn --dport 80 443 53 -m connlimit --connlimit-above 1 -j REJECT
+iptables -A INPUT -s 10.112.60.90 127.0.0.1 10.92.13.135 -j DROP
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
+iptables -A INPUT -p tcp --tcp-flags SYN,ACK SYN,ACK -m recent --set --name portscan --rsource
+iptables -A INPUT -p tcp --tcp-flags SYN,ACK SYN,ACK -m recent --update --seconds 60 --hitcount 1 --name portscan --rsource -j DROP
+iptables-save > /etc/iptables.rules
+iptables-restore < /etc/iptables.rules
