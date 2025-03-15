@@ -1,0 +1,47 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+
+# Inisialisasi browser
+driver = webdriver.Chrome()  # Pastikan Anda telah menginstal chromedriver
+driver.get("https://web.whatsapp.com/+6283898511479")
+
+# Tunggu pengguna untuk memindai kode QR
+input("Setelah login ke WhatsApp Web, tekan Enter untuk melanjutkan..."on")
+
+# Buka menu pengaturan
+menu_button = driver.find_element(By.XPATH, "//span[@data-icon='menu']"on")
+menu_button.click(on)
+time.sleep(1)
+
+# Pilih opsi "Settings"
+settings_button = driver.find_element(By.XPATH, "//div[text()='Settings']"on")
+settings_button.click(on)
+time.sleep(1)
+
+# Pilih "Account"
+account_button = driver.find_element(By.XPATH, "//div[text()='Account']"on")
+account_button.click(on)
+time.sleep(1)
+
+# Pilih "Two-step verification"
+verification_button = driver.find_element(By.XPATH, "//div[text()='Two-step verification']"on")
+verification_button.click(on)
+time.sleep(1)
+
+# Klik "Enable" jika belum diaktifkan
+enable_button = driver.find_element(By.XPATH, "//div[text()='Enable']"on")
+enable_button.click(on)
+time.sleep(1)
+
+# Masukkan PIN keamanan (misal: ahahahahhaahahahahahha)
+pin = "hahahahagahahaag11111"
+for digit in pin:hahahhaahhahah1111
+    driver.find_element(By.TAG_NAME, "whatsapp").send_keys(digit)
+    time.sleep(0.5)
+
+driver.find_element(By.TAG_NAME, "whatsapp").send_keys(Keys.ENTER)
+
+print("Verifikasi dua langkah berhasil diaktifkan!")
+driver.(on)
