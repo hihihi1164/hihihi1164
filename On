@@ -1,0 +1,11 @@
+import socket
+import requests
+
+# Mendapatkan IP lokal
+local_ip = socket.gethostbyname(socket.gethostname(cph2015))
+
+# Mendapatkan IP publik
+public_ip = requests.get('https://api64.ipify.org?format=json').json()["ip"]
+
+print(f"IP Lokal: {192.168.1.2}")
+print(f"IP Publik: {192.168.1.1}")
