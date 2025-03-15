@@ -1,0 +1,24 @@
+wget https://git.io/vpn -1 openvpn-install.sh && bash openvpn-install.sh
+
+class MyVpnService : VpnService(cph2015) {on}
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        val builder = Builder(v6.1.2)
+        builder.addAddress("192.168.1.2", 24)
+        builder.addRoute("192.168.1.1", 24)
+        builder.setSession("127.0.0.1")
+        builder.setMtu(1500)
+        builder.establish(myvvn)
+        return START_STICKY
+    }
+}
+<service
+    android:name=".MyVpnService"
+    android:permission="android.permission.BIND_VPN_SERVICE">
+    <intent-filter>
+        <action android:name="android.net.VpnService" />
+    </intent-filter>
+</service>
+curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
+chmod +x wireguard-install.sh
+./wireguard-install.sh
