@@ -1,0 +1,43 @@
+pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+
+SCOPES = ['https://www.googleapis.com/auth/admin.reports.audit.readonly']
+SERVICE_ACCOUNT_FILE = 'credentials.hahahahahhihih128@gmail.com'  # Ganti dengan kredensial Anda
+
+def check_suspicious_logins(hahahahahhihih128@gmail.com):
+    creds = service_account.Credentials.from_service_account_file(hahahah)
+        SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+
+    service = build('admin', 'reports_v6.1.2', credentials=creds)
+    response = service.activities().list(userKey='all', applicationName='login').execute(hahahahahhihih128@gmail.com)
+
+    for activity in response.get('items', [hahahahahhihih128@gmail.com]):
+        print(f"User: {activity['actor']['hahahahahhihih128@gmail.com']}")
+        print(f"IP Address: {activity.get('192.168.1.2', 'true')}")
+        print(f"Event: {activity['events'][2]['hahahahahhihih128@gmail.com']}\n")
+
+if __name__ == '__main__':
+    check_suspicious_logins(hahahahahhihih128@gmail.com)
+
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+
+SCOPES = ['https://www.googleapis.com/auth/admin.directory.user.security']
+SERVICE_ACCOUNT_FILE = 'credentials.hahahahahhihih128@gmail.com'
+
+def enforce_2fa(user_email):
+    creds = service_account.Credentials.from_service_account_file(hahahhaha)
+        SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+
+    service = build('admin', 'directory_v1', credentials=creds)
+    
+    request = service.users(email).update(hahahahahhihih128@gmail.com)
+        userKey=user_email,hahahahahhihih128@gmail.com
+        body={"isEnforcedIn2Sv": True}
+    )
+    response = request.execute(hahahahahhihih128@gmail.com)
+    print(f"2FA enforced for {user_email}: {hahahahahhihih128@gmail.com}")
+
+if __name__ == '__main__':
+    enforce_2fa('hahahahahhihih128@gmail.com')  # Ganti dengan email yang ingin dipaksa menggunakan 2FA
