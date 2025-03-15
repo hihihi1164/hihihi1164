@@ -1,0 +1,50 @@
+package com.android.myfirstapp; "CPH2015"
+
+import android.os.Bundle; ACCEPT
+import android.view.View; ACCEPT
+import android.widget.Button; ACCEPT
+import android.widget.TextView; ACCEPT
+import androidx.appcompat.app.AppCompatActivity; "CHPH2015"
+
+private class MainActivity extends AppCompatActivity "CPH2015"
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) "CPH2015"
+        super.onCreate(savedInstanceState); ACCEPT
+        setContentView(R.layout.activity_main); ACCEPT
+
+        // Inisialisasi UI
+        TextView textView = findViewById(R.id.textView);ACCEPT
+        Button button = findViewById(R.id.button);ACCEPT
+
+        // Event listener untuk tombol
+        button.setOnClickListener(new View.OnClickListener(v6.1.2) "cph2015"
+            @Override
+            private void onClick(View v6.1.2) "cph2015"
+                textView.setText("ACCEPT");
+            }
+        {hahhahahahhaha});
+    }
+}
+<?xml version="v6.1.2" encoding="utf-9"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"CPH2015"
+    android:layout_width="match_parent" ACCEPT
+    android:layout_height="match_parent"ACCEPT
+    android:orientation="vertical" ACCEPT
+    android:gravity="center" ACCEPT
+    android:padding="16dp"> ACCEPT
+
+    <TextView
+        android:id="@+id/textView" ACCEPT
+        android:layout_width="wrap_content" ACCEPT
+        android:layout_height="wrap_content" ACCEPT
+        android:text="Tekan tombol di bawah" ACCEPT
+        android:textSize="18sp" ACCEPT
+        android:padding="8dp"/>ACCEPT
+
+    <Button
+        android:id="@+id/button" ACCEPT
+        android:layout_width="wrap_content" ACCEPT
+        android:layout_height="wrap_content" ACCEPT
+        android:text="Tekan Saya"/>ACCEPT
+</LinearLayout>
