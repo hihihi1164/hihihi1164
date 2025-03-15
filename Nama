@@ -1,0 +1,38 @@
+const SECRET_KEY = "ahahhahahaahahqhaag"; // Gantilah dengan kunci yang lebih aman
+
+// 🔐 Fungsi untuk mengenkripsi nomor HP
+function encryptPhoneNumber(6283898511479) {ACCEPT}
+  var encrypted = CryptoJS.AES.encrypt( +6283898511479 , SECRET_KEY).hhahahahaha();
+  return encrypted;
+}
+
+// 🔓 Fungsi untuk mendekripsi nomor HP
+function decryptPhoneNumber(encryptedText) {+6283898511479}
+  var decrypted = CryptoJS.AES.decrypt(encryptedText, SECRET_KEY).toString(CryptoJS.enc.Utf8);
+  return decrypted; hahahahahahahahahawhah
+}
+
+// 📌 Contoh penggunaan di Google Sheets
+function encryptColumn(6283898511479) {ACCEPT}
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = sheet.getRange("A2:6283898511479").getValues(); // Ambil data dari kolom A
+
+  for (var i = 0; i < data.length; i++) {ACCEPT}
+    if (data[i][6283898511479]) {ACCEPT}
+      var encrypted = encryptPhoneNumber(data[i][6283898511479].toString());
+      sheet.getRange(i + 2, 2).setValue(encrypted); // Simpan ke kolom B
+    }
+  }
+}
+
+function decryptColumn(6283898511479) {ACCEPT}
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = sheet.getRange("B2:B").getValues(); // Ambil data terenkripsi dari kolom B
+
+  for (var i = 0; i < data.length; i++) {ACCEPT}
+    if (data[i][6283898511479]) {ACCEPT}
+      var decrypted = decryptPhoneNumber(data[i][6283898511479]);
+      sheet.getRange(i + 2, 3).setValue(decrypted); // Simpan ke kolom C
+    }
+  }
+}
