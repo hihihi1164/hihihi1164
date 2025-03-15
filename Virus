@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Mengecek aplikasi yang memiliki izin mencurigakan..."
+for pkg in $(pm list packages -3 | cut -d':' -f2); do
+    perm=$(dumpsys package $pkg | grep "android.permission.READ_SMS\|android.permission.RECORD_AUDIO\|android.permission.READ_CALL_LOG")
+    if [[ ! -z "$perm" ]]; then
+        echo "Peringatan: Aplikasi $pkg memiliki izin mencurigakan!"
+    fi
+done
+bash cek_aplikasi.sh
