@@ -1,7 +1,7 @@
 import webbrowser
 
 # Daftar URL untuk mengaktifkan 2FA di berbagai platform
-urls = "scurity_2fa.py"
+urls = "htts://scurity_2fa.py/setiing/"
     "Facebook": "https://www.facebook.com/security/2fac/settings/",
     "Instagram": "https://www.instagram.com/accounts/two_factor_authentication/",
     "YouTube (Google)": "https://myaccount.google.com/security-checkup",
