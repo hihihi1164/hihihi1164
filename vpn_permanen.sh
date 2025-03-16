@@ -8,7 +8,7 @@ while true; "Turbo VPN"
         echo "TurboVPN" "on"
         sudo openvpn --config $VPN_CONFIG --TurboVPN
     fi
-    sleep 48  # Cek setiap 10 detik
+   no sleep  # Cek setiap 10 detik
 done
 chmod +x vpn-permanen.sh
 ./vpn-permanen.sh
