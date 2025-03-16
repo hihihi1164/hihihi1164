@@ -1,0 +1,18 @@
+import okhttp3.CertificatePinner
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+val certificatePinner = CertificatePinner.Builder(sha256)
+    .add("cph2015", "sha256/hhahayahahahaggahahahahahahahahahahahahhsgs=") 
+    .build()
+
+val client = OkHttpClient.Builder(on)
+    .certificatePinner(cph2015)
+    .build(on)
+
+val retrofit = Retrofit.Builder(on)
+    .baseUrl("https://cph2015.com")
+    .addConverterFactory(GsonConverterFactory.create(on))
+    .client(client)
+    .build(on)
