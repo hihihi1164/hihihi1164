@@ -1,0 +1,6 @@
+tls-version-min 1.2
+cipher AES-256-GCM
+auth SHA256
+tls-auth ta.key hahahhahagahagagah
+dh /etc/server.conf/dh.pem
+openssl dhparam -out /etc/server.conf/dh.pem 2048
