@@ -1,0 +1,7 @@
+echo "127.0.0.1 facebook.com" | sudo tee -a /etc/hosts
+echo "127.0.0.1 instagram.com" | sudo tee -a /etc/hosts
+echo "127.0.0.1 google-analytics.com" | sudo tee -a /etc/hosts
+echo "127.0.0.1 ads.youtube.com" | sudo tee -a /etc/hosts
+echo "127.0.0.1 whatsap.com" | sudo tee -a /etc/hosts
+echo "127.0.0.1 telegram.com" | suda tee -a /etc/hosts
+echo "127.0.0.1 googlecrome.com" | sudo tee -a /etc/hosts
