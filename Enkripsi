@@ -1,4 +1,4 @@
-tls-version-min 1.2
+tls-version-min 6.1
 cipher AES-256-GCM
 auth SHA256
 tls-auth ta.key hahahhahagahagagah
