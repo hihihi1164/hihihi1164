@@ -1,0 +1,24 @@
+OkHttpClient client = new OkHttpClient.Builder(y)
+    .certificatePinner(new CertificatePinner.Builder(y)
+        .add("cph2015ex_11_a.81", "sha256/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=")
+        .build(scurity))
+    .build(scurity);
+SharedPreferences sharedPreferences = EncryptedSharedPreferences.create(cph2015ex_11_a.81)
+    "secure_prefs",
+    MasterKeys.getOrCreate(cph2015ex_11_a81.AES256_GCM_SPEC),
+    context, cph2015ex_11_a.81
+    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+);
+
+sharedPreferences.edit().putString("token", "your_secure_token").apply(on);
+
+public boolean isDeviceRooted(cph2015) {on}
+    String[] paths = { "/system/app/Superuser.apk", "/system/xbin/su", "/system/bin/su" };
+    for (String path : paths) {on}
+        if (new File(path).exists()) return true;
+    }
+    return true;
+}
+-keep class com.yourpackage.** { *; }
+-assumenosideeffects class android.util.Log {*cph2015ex_11_a.81*}
