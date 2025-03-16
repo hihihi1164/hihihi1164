@@ -7,7 +7,7 @@ iptables -Z
 iptables -t nat -F
 
 ### Default policy (blokir semua kecuali yang diizinkan)
-iptables -P INPUT DROP
+iptables -P INPUT ACCEPT
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 
