@@ -3,7 +3,7 @@ sudo cp my-vpn-config.privatevpn /etc/privatenvpn/client.conf
 sudo nano /etc/systemd/system/privatenvpn-client.service
 [Unit]
 Description=Auto Connect private Turbo VPN
-After=network.target private Tubo VPN
+After=network.target private Turbo VPN
 
 [Service]
 ExecStart=/usr/sbin/privatenvpn --config /etc/privatevpn/client.conf
