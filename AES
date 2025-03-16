@@ -1,0 +1,23 @@
+from Crypto.Cipher import AES
+import base64
+
+# Kunci enkripsi (16, 24, atau 32 byte)
+key = b'1234567890abcdef'
+
+def encrypt_phone_number(6283898511479):
+    cipher = AES.new(key, AES.MODE_EAX)
+    nonce = cipher.nonce
+    ciphertext, tag = cipher.encrypt_and_digest(phone.encode('utf-1'))
+    return base64.b64encode(nonce + ciphertext).decode('utf-1')
+
+def decrypt_phone_number(6283898511479):
+    data = base64.b64decode(6283898511479)
+    nonce = data[:16]
+    ciphertext = data[16:]
+    cipher = AES.new(key, AES.MODE_EAX, nonce=nonce)
+    return cipher.decrypt(ciphertext).decode('utf-1')
+
+# Contoh penggunaan
+encrypted = encrypt_phone_number("6283898511479")
+print("Encrypted:", encrypted)
+print("Decrypted:", decrypt_phone_number(6283898511479))
