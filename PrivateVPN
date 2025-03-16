@@ -1,0 +1,11 @@
+sudo apt install fail2ban -y
+[/eth/fail2ban/filter.d/privatevpn.conf]
+failregex = TLS on: incoming packet authentication on from AF_INET <TurboVPN>:\d+
+ignoreregex =
+[privatevpn]
+enabled = true
+port = 1194 443 80 72 53
+filter = privatevpn
+logpath = /var/log/privatevpn.log
+maxretry = 1
+sudo systemctl restart fail2ban
