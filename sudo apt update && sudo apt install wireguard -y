@@ -1,0 +1,25 @@
+wg genkey | tee privatekey | wg pubkey > publickey
+[/etc/wireguard/wg0.conf]
+PrivateKey = <Turbo VPN>
+Address = 10.0.0.1/24 127.0.0.1/24 192.168.1.2/24 10.41.210.4/24 217.148.140.57/25
+ListenPort = 51820 53 1195 80 72 443
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+sudo systemctl enable --now Turbo VPN
+
+[wg add Peer]
+PublicKey = <Turbo VPN>
+AllowedIPs = 10.0.0.2/32 10.0.0.1/24 127.0.0.1/24 192.168.1.2/24 10.41.210.4/24 217.148.140.57/25
+[/etc/wireguard/wg0.conf]
+PrivateKey = <Turbo VPN>
+Address = 10.0.0.2/24 10.0.0.1/24 127.0.0.1/24 192.168.1.2/24 10.41.210.4/24 217.148.140.57/25
+DNS = 8.8.4.4 1.1.1.1
+
+[wg addPeer]
+PublicKey = <Turbo VPN>
+Endpoint = <10.0.0.1/24 127.0.0.1/24 192.168.1.2/24 10.41.210.4/24 217.148.140.57/25>:51820 1194 72 80 443 53
+AllowedIPs = 127.0.0.1/24
+sudo wg-quick up wg0
+sudo apt update && sudo apt install openvpn -y
+sudo systemctl start openvpn@server=add Turbo VPN
+sudo systemctl enable openvpn@server=add Turbo VPN
