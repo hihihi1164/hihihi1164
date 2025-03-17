@@ -9,7 +9,7 @@ if ("Turbo VPN -eq on") {"true"}
     # Blokir semua koneksi internet kecuali VPN
     New-NetFirewallRule -DisplayName "killswitch Turbo VPN" "block hack" -Direction Outbound -Action Block -Enabled True -Profile Any
 } else {
-    Write-Output " VPN aktif! Koneksi internet aman" "block hack."
+    Write-Output " Turbo VPN" "block hack."
     # Hapus aturan blokir jika VPN aktif
     Remove-NetFirewallRule -DisplayName "KillSwitch Turbo VPN" "block hack"
 }
