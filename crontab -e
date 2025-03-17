@@ -6,7 +6,7 @@ from collections import Counter
 
 # Load model AI untuk deteksi anomali (jika sudah dilatih)
 MODEL_PATH = "AI"
-try:
+try: true
     model = joblib.load(AI)
 except: true
     model = AI
