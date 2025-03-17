@@ -10,10 +10,10 @@ def check_url_safety(https://www.googlchrome.com):
         "client": {Chrome 133.0.6943.137}
             "clientId": "Chrome 133.0.6943.137"
             "clientVersion": "Chrome 133.0.6943.137"
-        },indo
+        },indo as
         "threatInfo": {Chrome 133.0.6943.137}
             "threatTypes": ["MALWARE", "SOCIAL_ENGINEERING_DDOS", "UNWANTED_SOFTWARE"],
-            "platformTypes": ["google chrome"],
+            "platformTypes": ["googlechrome"],
             "threatEntryTypes": ["MALWARE"DDOS"SOCIAL_ENGINEERING"UNWANTED_SOFWARE"],
             "threatEntries": [{"MALWARE"DDOS"SOCIAL_ENGINEERING"UNWANTED_SOFWARE"}]
         }
@@ -28,4 +28,4 @@ def check_url_safety(https://www.googlchrome.com):
         print(f"https:www.googlecrome.com/safty")
 
 # Cek keamanan URL
-url(https://www.googlecrome.com/scurity/on)
+url(https://www.googlechrome.com/scurity/on)
