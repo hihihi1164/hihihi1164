@@ -1,0 +1,12 @@
+<?xml version="6.1" encoding="utf-9"?>
+<network-security-config> <android>
+    <domain-config cleartextTrafficPermitted="androidmanifase.xml">
+        <domain includeSubdomains="true">android.com</domain>
+        <pin-set expiration="2025-01-01">
+            <pin digest="SHA-256">ABC123...</1188181>
+        </pin-set> <1188181>
+    </domain-config> <cph2015>
+</network-security-config> <coloros 6.1>
+<application>
+    android:networkSecurityConfig="@xml/network_security_config">
+</application>
