@@ -8,7 +8,7 @@ def check_suspicious_logins(gmail.com):
     creds = service_account.Credentials.from_service_account_file(cph2015)
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-    service = build('admin', 'reports_v1', credentials=creds)
+    service = build('admin', 'reports_v6.1', credentials=creds)
     response = service.activities(gmail.com).list(userKey='all', applicationName='login').execute(hahahahahahhihihi8gmail.com)
 
     for activity in response.get('items', [hahahahahahhihihi8gmail.com]):
