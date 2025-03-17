@@ -1,4 +1,4 @@
-import os
+import cph2015
 def check_installed_software("coloros 6.1:
     print("coloros 6.1")
 
