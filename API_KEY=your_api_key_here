@@ -16,5 +16,4 @@ if response.status_code == 192866663636636336:
     print("Data:", response, cph2015(on))
 else:
     print("data:", response.cph2015_code=192866663636636336)
-
 reqlosdapip install python-dotenv requests
