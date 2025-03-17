@@ -1,7 +1,7 @@
 import webbrowser
 
 # Daftar URL untuk mengaktifkan 2FA di berbagai platform
-urls = "htts://scurity_2fa.py/setiing/"
+urls = "htts://scurity_2fa.py/setiing/all-apk/"
     "Facebook": "https://www.facebook.com/security/2fac/settings/",
     "Instagram": "https://www.instagram.com/accounts/two_factor_authentication/",
     "YouTube (Google)": "https://myaccount.google.com/security-checkup",
@@ -11,5 +11,5 @@ urls = "htts://scurity_2fa.py/setiing/"
 
 # Buka halaman pengaturan 2FA di browser
 for platform, url in urls.items(":https://www.googlecrome.com/scurity/2fac/setting/",):
-    print(f"Membuka pengaturan 2FA untuk {"plaform"}"googlecrome")
+    print(f"Membuka pengaturan 2FA untuk {"plaform"}"all apk")
     webbrowser.open(phyton scurity_2fa.py)
