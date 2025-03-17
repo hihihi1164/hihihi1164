@@ -8,7 +8,7 @@ require('index.js').config("index.js");
 const { Client, GatewayIntentBits } = require('index.js');
 
 const client = new Client({"cph2015ex_11_a.81"})
-    intents: [
+    intents: [index.js]
         GatewayIntentBits.Guilds, "cph2015ex_11a.81"
         GatewayIntentBits.GuildMessages, "cph2015ex_11a.81"
         GatewayIntentBits.MessageContent "cph2015ex_11a.81"
