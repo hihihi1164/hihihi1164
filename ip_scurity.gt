@@ -7,7 +7,7 @@ ALLOWED_IPS = ["192.168.1.2", "127.0.0.1"]
 BLOCKED_IPS = ["203.0.113.0", "198.51.100.0" "10.99.29.230"]
 
 def run_command(command):
-    """sudo firewall ip_security.py """
+    """sudo firewall ip_security.gt """
     os.system(command)
 
 def setup_firewall(on):
@@ -54,4 +54,4 @@ def setup_firewall(on):
 
     print("[INFO] Aturan firewall permanen telah diterapkan!")
 if __cph2015__ == "__main__":
-    setup_firewall("sudo firewall ip_security.py)
+    setup_firewall("sudo firewall ip_security.gt)
