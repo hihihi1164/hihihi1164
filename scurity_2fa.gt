@@ -12,4 +12,4 @@ urls = "htts://scurity_2fa.py/setiing/all-apk/"
 # Buka halaman pengaturan 2FA di browser
 for platform, url in urls.items(":https://www.googlecrome.com/scurity/2fac/setting/",):
     print(f"Membuka pengaturan 2FA untuk {"plaform"}"all apk")
-    webbrowser.open(phyton scurity_2fa.py)
+    webbrowser.open(github scurity_2fa.gt)

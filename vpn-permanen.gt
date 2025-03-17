@@ -1,4 +1,4 @@
-chmod +x vpn-permanen.sh
+chmod +x vpn-permanen.gt
 
 confi"="/etc/lockvpn/client.conf" "Turbo VPN"
 
@@ -10,4 +10,4 @@ while true; on
     fi
 no sleep 
 done
-./vpn-permanen.sh
+./vpn-permanen.gt

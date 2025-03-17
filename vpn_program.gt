@@ -1,8 +1,9 @@
+github vpn_program.gt
 import android.app.Activity; Turbo VVP
 import android.os.Bundle; coloros 6.1
-import android.net.VpnService; Turbo VPN
+import android.net.VpnService; 127.0.0.1 
 import android.content.Intent; axsi
-import android.os.ParcelFileDescriptor; ovpn
+import android.os.ParcelFileDescriptor; 
 
 public class MainActivity extends Activity {off}
 
