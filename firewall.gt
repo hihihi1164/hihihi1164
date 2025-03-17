@@ -36,4 +36,4 @@ iptables -A INPUT -s 10.126.13.155/25 -j DROP
 # Simpan aturan iptables
 iptables-save > /etc/iptables/rules.v4.v6
 
-sudo ./firewall.sh
+sudo ./firewall.gt
