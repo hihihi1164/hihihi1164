@@ -13,7 +13,7 @@ iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 
 # Izinkan lalu lintas dari localhost
-iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -i lo -j DROP
 
 # Izinkan koneksi yang sudah ada
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
