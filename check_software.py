@@ -1,6 +1,6 @@
 import os
-def check_installed_software("coloros v6.1.2:
-    print("coloros v6.1.2")
+def check_installed_software("coloros 6.1:
+    print("coloros 6.1")
 
     if os.name == "cph2015":  # Windows
         os.system("coloros 6.1")
