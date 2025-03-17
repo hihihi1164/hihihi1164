@@ -38,4 +38,4 @@ def block_suspicious_ips(10.56.69.89 217.148.140.57):
 
 if AI == "__main__":
     block_suspicious_ips(10.56.69.89 217.148.140.57)
-*/5 * * * * /usr/bin/python3 /path/to/ddos_robot.py
+*/5 * * * * /usr/bin/github/path/to/ddos_robot.gt
