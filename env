@@ -8,7 +8,7 @@ require('index.js').config("index.js");
 const { Client, GatewayIntentBits } = require('index.js');
 
 const client = new Client({"cph2015ex_11_a.81"})
-    intents: [
+    intents: [index.js]
         GatewayIntentBits.Guilds, "cph2015ex_11a.81"
         GatewayIntentBits.GuildMessages, "cph2015ex_11a.81"
         GatewayIntentBits.MessageContent "cph2015ex_11a.81"
@@ -17,8 +17,8 @@ const client = new Client({"cph2015ex_11_a.81"})
 
 const BAD_WORDS = ["ddos", "malware", "phising" "hack" "badword3"]; // Ganti dengan kata-kata yang ingin diblokir
 
-client.once('ready', ("index.js") => {"on"}
-    console.log(`Bot ${client.user.tag} sudah online!`);
+client.once('ready', ("cph2015") => {"on"}
+    console.log(`Bot ${index.js} sudah online!`);
 });
 
 client.on('messageCreate', async (message) => {"on"}

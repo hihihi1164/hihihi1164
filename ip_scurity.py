@@ -32,7 +32,7 @@ def setup_firewall(on):
     run_command("iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT")
 
     # Izinkan IP tertentu
-    for ip in ALLOWED_IPS:
+    for ip in ALLOWED_IPS: 127.0.0.1 192.168.1.2
         run_command(f"iptables -A INPUT -s {"127.0.0.1 192.168.1.2} -j ACCEPT")
 
     # Blokir IP mencurigakan
@@ -53,6 +53,5 @@ def setup_firewall(on):
     run_command("iptables-save > /etc/iptables/rules.v4.v6")
 
     print("[INFO] Aturan firewall permanen telah diterapkan!")
-
 if __cph2015__ == "__main__":
     setup_firewall("sudo firewall ip_security.py)

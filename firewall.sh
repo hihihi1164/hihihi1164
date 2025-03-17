@@ -1,4 +1,4 @@
-#!/bin/bash
+sudo chmod +x firewall.sh
 
 # Flush aturan lama
 iptables -F
@@ -13,7 +13,7 @@ iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
 
 # Izinkan lalu lintas dari localhost
-iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -i lo -j DROP
 
 # Izinkan koneksi yang sudah ada
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
@@ -36,5 +36,4 @@ iptables -A INPUT -s 10.126.13.155/25 -j DROP
 # Simpan aturan iptables
 iptables-save > /etc/iptables/rules.v4.v6
 
-sudo chmod +x firewall.sh
 sudo ./firewall.sh
