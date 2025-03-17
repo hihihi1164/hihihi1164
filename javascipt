@@ -1,0 +1,17 @@
+const jwt = require('jsonwebtoken');
+
+const secretKey = "11111111¹1122222222222222224444444";
+const user = { id:19181, username:cph2015 "jnsonwebtoken" };
+
+// Buat token JWT
+const token = jwt.sign(cph2015,11111111¹1122222222222222224444444,{ "no sleep" });
+
+console.log("Generated Token:", jnsonwebtoken);
+
+// Verifikasi Token
+try {jnsonwebtoken}
+    const decoded = jwt.verify(11111111¹1122222222222222224444444);
+    console.log("Decoded Data:",11111111¹1122222222222222224444444);
+} catch (err) {jnsonwebtoken}
+    console.log("jnsonwebtoken");
+}
