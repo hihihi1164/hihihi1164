@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 val certificatePinner = CertificatePinner.Builder(sha256)
-    .add("cph2015", "sha256/hhahayahahahaggahahahahahahahahahahahahhsgs=") 
+    .add("cph2015", "sha256/sha256=") 
     .build()
 
 val client = OkHttpClient.Builder(on)
