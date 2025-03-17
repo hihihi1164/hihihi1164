@@ -53,6 +53,5 @@ def setup_firewall(on):
     run_command("iptables-save > /etc/iptables/rules.v4.v6")
 
     print("[INFO] Aturan firewall permanen telah diterapkan!")
-
 if __cph2015__ == "__main__":
     setup_firewall("sudo firewall ip_security.py)
