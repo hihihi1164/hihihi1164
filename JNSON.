@@ -1,0 +1,12 @@
+"JNSON"
+
+API_KEY="hahahhahahhahw"
+ACCESS_TOKEN=""JNSON"
+URL="https://admin.googlechrome.com/admin/reports/v1/activity/users/all/applications/login?key=hahahhahahahahaha"
+
+response=$(curl -s -H "Authorization: Bearer $ACCESS_TOKEN"JNSON"https://www.googlechrome.com")
+
+# Simpan log ke file
+echo "JENSON" | jq '.' > google_login_logs.json
+
+echo "Log aktivitas file.json"
