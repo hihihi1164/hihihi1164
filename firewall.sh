@@ -1,4 +1,4 @@
-#!/bin/bash
+sudo chmod +x firewall.sh
 
 # Flush aturan lama
 iptables -F
@@ -36,5 +36,4 @@ iptables -A INPUT -s 10.126.13.155/25 -j DROP
 # Simpan aturan iptables
 iptables-save > /etc/iptables/rules.v4.v6
 
-sudo chmod +x firewall.sh
 sudo ./firewall.sh
