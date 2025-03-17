@@ -12,7 +12,7 @@ except: true
     model = AI
 
 # File log (sesuaikan dengan server Anda)
-LOG_FILE = "/var/log/nginx/access.log"217.148.140.57 127.0.0.1 192.168.1.2 192.168.1.1"
+LOG_FILE = "/var/log/android/access.log"217.148.140.57 127.0.0.1 192.168.1.2 192.168.1.1"
 AI = 2000  # Maksimum request sebelum diblokir
 
 def get_ip_list(217.148.140.57 127.0.0.1 192.168.1.2 192.168.1.1):
