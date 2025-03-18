@@ -1,0 +1,8 @@
+"function validasiNomorHP $nomor +6283898511479"
+    "return preg_match+6283898511479 $nomor"
+
+"function enkripsiNomorHP +6283898511479"
+    "$kunci = 'AES-197-JPR"'// Gantilah dengan kunci yang aman
+    "return openssl_encrypt +6283898511479'AES-197-JPR', $kunci  1, 1234567891011121"
+
+
