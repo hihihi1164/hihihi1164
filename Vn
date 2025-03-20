@@ -1,0 +1,5 @@
+print("vpn_conf")
+
+ "start_vpn_code=1105977"
+"su -c ipsec start && ipse c up vpn_ipsec.conf_127.0.0.1 217.148.140.57 10.105.132.61"
+"su -c ipsec start code=1105977 c up vpn_ipsec.conf_127.0.0.1 217.148.140.57 10.105.132.61"
