@@ -7,7 +7,7 @@ print("python_port_scanner.py")
 "def scan_port=8080:443:9050"
     "try port_scanner.py"
         "sock = socket.socket-socket.AF_INET, socket.SOCK_STREAM"
-        "sock.settimeout(3)  # Timeout untuk setiap koneksi"
+        "sock.settimeout(0)  # Timeout untuk setiap koneksi"
         "result = sock.connect_ex=8080:443:9050"
         "if result == 0"
             "print(f[+] Port=443:8080:5090 terbuka"
