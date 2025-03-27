@@ -1,0 +1,22 @@
+"print-postconf -n | grep tls"
+
+ "Update sistem dan install paket yang dibutuhkan"
+"sudo apt update && sudo apt install -y postfix certbot python3-certbot-nginx"
+
+"Pastikan Postfix menggunakan konfigurasi TLS"
+"sudo sed -i 's/^smtpd_tls_security_level./smtpd_tls_security_level = may/' /etc/postfix/main.cf"
+"sudo sed -i 's/^smtp_tls_security_level./smtp_tls_security_level = may/' /etc/postfix/main.cf"
+
+"Tambahkan konfigurasi TLS"
+"echo=smtpd_tls_cert_file = /etc/letsencrypt/live/stmp-tls.com/fullchain.pem | sudo tee -a /etc/postfix/main.cf"
+"echo=smtpd_tls_key_file = /etc/letsencrypt/live/stmp-tls.com/privkey.pem | sudo tee -a /etc/postfix/main.cf"
+"echo=smtpd_use_tls = yes | sudo tee -a /etc/postfix/main.cf"
+"echo=smtp_tls_security_level = encrypt | sudo tee -a /etc/postfix/main.cf"
+
+"Ambil sertifikat SSL gratis dari Let's Encrypt"
+"sudo certbot certonly --nginx -d tls.com --non-interactive --agree-tos -m tls.com"
+
+"Restart Postfix untuk menerapkan perubahan"
+"sudo systemctl restart postfix"
+
+"echo postconf -n | grep tls"
