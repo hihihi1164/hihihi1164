@@ -33,7 +33,7 @@ resource "google_android_compute_security_policy" "armor_policy" {
     match {
       versioned_expr = "SRC_IPS_V1"
       config {
-        src_ip_ranges = ["CN/as"] 
+        src_ip_ranges = ["CN"]
       }
     }
     description = "terraform init"
