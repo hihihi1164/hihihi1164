@@ -1,9 +1,0 @@
-#!/bin/bash
-# Install Nginx
-sudo apt update && sudo apt install nginx -y
-
-# Konfigurasi agar Nginx selalu aktif
-sudo systemctl enable nginx
-sudo systemctl start nginx
-
-echo "Server Nginx telah diaktifkan secara permanen."
