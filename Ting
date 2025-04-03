@@ -1,4 +1,0 @@
-su
-iptables -A INPUT -p tcp --syn -m connlimit --connlimit-above 10000 -j REJECT
-iptables -A INPUT -p tcp --dport 443 -m connlimit --connlimit-above 10000 -j REJECT
-iptables-save > /data/local/tmp/iptables_rules
