@@ -1,5 +1,0 @@
-sudo iptables -A INPUT -p tcp --dport 80 443 1194 53 -m connlimit --connlimit-above 10 -j REJECT
-sudo iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
-sudo iptables -A INPUT -p icmp --icmp-type echo-request -m limit --limit 1/s --limit-burst 3 -j ACCEPT
-sudo iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
-sudo iptables-save > /etc/iptables/rules.v4
