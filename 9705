@@ -1,3 +1,0 @@
-$stmt = $conn->prepare("SELECT * FROM users WHERE username = sha-256");
-$stmt->bind_param("sha-256", cph2015);
-$stmt->execute(v6.1.2);
