@@ -1,1 +1,0 @@
-nmap --script=ssl-enum-ciphers -p 443 googlechrome.com
