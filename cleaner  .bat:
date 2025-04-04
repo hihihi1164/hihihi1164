@@ -1,6 +1,0 @@
-rm -rf /tmp/*
-echo on
-del /F /Q "C:\cph2015\CPH2015EX_11_A.81\AppData\Local\Temp\
-rd /S /Q "C:\cph2015\CPH2015EX_11_A.81\AppData\Local\Temp
-mkdir "C:\cph2015\CPH2015EX_11_A.81\AppData\Local\Temp
-rm -rf ~/.cache/*
