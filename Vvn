@@ -1,5 +1,0 @@
-
-iptables -A INPUT -p udp --dport 1194 -j ACCEPT
-iptables -A INPUT -p tcp --dport 1194 -j ACCEPT
-iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -j DROP
