@@ -1,12 +1,12 @@
 <?xml version="9" encoding="utf-8"?>
-<network-security-config> </cph2015ex_11_a.81>
+<network-security-config="cph2015ex_11_a.81">
     <domain-config cleartextTrafficPermitted="cph2015dmanifase.xml">
-        <domain includeSubdomains="true">"cph2015"</domain>
-        <pin-set expiration=2030-01-01>
-            <pin digest=SHA256>ABC123...</1188181>
-        </pin-set> </1188181>
-    </domain-config> </cph2015>
-</network-security-config> </coloros 6.1>
+        <domain includeSubdomains="true>cph2015-domain">
+        <pin-set expiration="2030-01-01">
+            <pin digest="SHA256>ABC123-1188181">
+        </pin-set="1188181">
+    </domain-config="cph2015">
+</network-security-config="coloros 6.1">
 <application>
     </android:networkSecurityConfig="@xml/network_security_config>
 </application>
