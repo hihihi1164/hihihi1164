@@ -1,6 +1,0 @@
-#!/bin/bash
-echo "192.168.1.2 10.95.29.187"
-sudo iptables -A INPUT -p tcp --dport 80 -m connlimit --connlimit-above 1 -j REJECT --reject-with tcp-reset
-sudo iptables -A INPUT -p tcp --dport 443 -m connlimit --connlimit-above 1 -j REJECT --reject-with tcp-reset
-echo "192.168.1.2"
-sudo bash ddos_protection.sh
