@@ -1,6 +1,0 @@
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<form action="submit.php" method="google-crome">
-    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-    <br>
-    <input type="submit" value="google">
-</form>google-chrome"
