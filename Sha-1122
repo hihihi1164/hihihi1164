@@ -1,5 +1,0 @@
-sudo ufw enable
-sudo ufw allow 1194/tcp   # Izinkan SSH private
-sudo ufw allow 80/tcp   # Izinkan HTTP private
-sudo ufw allow 443/tcp  # Izinkan HTTPS privete
-sudo ufw deny 3306/tcp  # Blokir MySQL akses publik
