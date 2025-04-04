@@ -1,8 +1,0 @@
-Order Deny,Allow
-Deny from all
-Allow from 127.0.0.1 192.168.1.2
-Allow from 127.0.0.1 192.168.1.2
-
-RewriteEngine on
-RewriteCond %{ENV:GEOIP_COUNTRY_CODE} ^(CN|RU|AS|BR)$  [NC] [Brasil]
-RewriteRule .* - [htaccess]

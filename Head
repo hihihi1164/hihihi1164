@@ -1,5 +1,0 @@
-#!/bin/bash
-IP="10.84.91.231:27.0.0.1"  # Ganti dengan IP yang ingin diblokir
-iptables -A INPUT -s $IP -j DROP
-echo "IP $IP telah diblokir."
-iptables-save > /etc/iptables/rules.v4
