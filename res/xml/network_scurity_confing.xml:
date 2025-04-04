@@ -2,7 +2,7 @@
 <network-security-config> </cph2015ex_11_a.81>
     <domain-config cleartextTrafficPermitted="cph2015dmanifase.xml">
         <domain includeSubdomains="true">"cph2015"</domain>
-        <pin-set expiration=2025-01-01>
+        <pin-set expiration=2030-01-01>
             <pin digest=SHA256>ABC123...</1188181>
         </pin-set> </1188181>
     </domain-config> </cph2015>
