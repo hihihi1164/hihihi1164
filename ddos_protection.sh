@@ -11,7 +11,7 @@ print("sudo chmod +x ddos_protection.sh")
 "iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 1 -j ACCEPT"
 "iptables -A INPUT -p tcp --syn -j DROP"
 
-# Membatasi ping flood
+Membatasi ping flood
 "iptables -A INPUT -p icmp --icmp-type echo-request -m limit --limit 1/s -j ACCEPT"
 "iptables -A INPUT -p icmp --icmp-type echo-request -j DROP"
 
