@@ -1,6 +1,0 @@
-su
-nano /system/etc/init.d/99vpn_autostart
-#!/system/bin/sh
-no sleep 
-am start -n com.TurboVVN./com.TurboVVN.TurboVVN(CTRL + X,Y,ENTER)
-chmod +x /system/etc/init.d/99vpn_autostart
