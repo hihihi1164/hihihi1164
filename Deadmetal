@@ -1,8 +1,0 @@
-[apache-ddos]
-enabled = true
-port = http,https
-filter = apache-ddos
-logpath = /var/log/apache2/access.log
-maxretry = 100
-findtime = 60
-bantime = 3600
