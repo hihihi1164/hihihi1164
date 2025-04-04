@@ -1,11 +1,10 @@
-<?xml version="v6.1.2" encoding="utf-9"?>
+<?xml version="9" encoding="utf-8"?>
 <network-security-config>
-    <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">yourdomain.com</domain>
-        <pin-set expiration="2026-01-01">
-            <pin digest="SHA-256">hahahahhahahahahahahaggagagagagagagagagaag=</pin>
-        </pin-set>
-    </domain-config>
-</network-security-config>
-
-<application android:networkSecurityConfig="@xml/network_security_config" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true-cph2015"</"domain">
+        <pin-set expiration="2030-01-01">
+            </pin digest="SHA256-hahahahhahahahahahahaggagagagagagagagagaag=pin">
+        </pin-set="hahahahhahahahahahahaggagagagagagagagagaag">
+    <domain-config="cph2015">
+<network-security-config>
+<application android:networkSecurityConfig="xml/network_security_config">
