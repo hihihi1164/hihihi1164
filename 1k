@@ -1,8 +1,0 @@
-#!/system/bin/sh
-echo "Mencari aplikasi berbahaya..."
-pm list packages | grep "spy" | awk -F: '{print $2}' > malware.txt
-
-while read package; do
-    pm uninstall --user 0 $package
-    echo "$package telah dihapus."
-done < malware.txt
