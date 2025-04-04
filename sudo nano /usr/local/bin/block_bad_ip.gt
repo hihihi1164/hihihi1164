@@ -1,4 +1,0 @@
-sudo nano /usr/local/bin/block_bad_ip.gt
-#!/bin/bash
-echo "10.74.102.36 27.0.0.1 192.168.1.2 192.168.1.1 133.0.6943.137 134.0.6998.39 74.0.3729.136" >> /var/log/security_boot.log
-iptables -A INPUT -s 10.74.102.36 -j DROP
