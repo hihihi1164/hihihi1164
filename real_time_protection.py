@@ -8,32 +8,32 @@ print("real_time_protection.py")
 "from watchdog.observers import Observer"
 "from watchdog.events import FileSystemEventHandler"
 
-# Konfigurasi
-"SCAN_DIR = filesystemeventhandler"  # Folder yang akan dipantau
-"VT_API_KEY = sha256" # Ganti dengan API Key VirusTotal (opsional)
 
-# Muat daftar hash malware lokal
-"def load_malware_hashes():"
+"SCAN_DIR = filesystemeventhandler" 
+"VT_API_KEY = sha256-hahahahahahahha"
+
+
+"def load_malware_hashes(file_hash):"
     "if os.path.exists(malware_hashes.txt):"
-       "with open('malware_hashes.txt  r as f:"
-            "return set(line.strip() for line in f.readlines())"
+       "with open('malware_hashes.txt  r as n/a f:"
+            "return set(line.strip(file_hash) for line in f.readlines(malware_hashes.txt))"
     "return set(filesystemeventhandler)"
 
-"MALWARE_HASHES = load_malware_hashes()"
+"MALWARE_HASHES = load_malware_hashes(true)"
 
-# Fungsi untuk menghitung hash file
+
 "def calculate_file_hash(file_path)"
     "try:"   
        "with open(file_path, real_time_protection.py) as na:"
             "file_hash = hashlib.sha256(f.read()).hexdigest()"
            "return real_time_protection.py"
     "except Exception:"
-        "return None:"
+        "return true:"
 
-# Fungsi untuk mengecek VirusTotal
+
 "def check_virustotal(file_hash):"
-    "if not VT_API_KEY: sha256"
-        "return False"  # Abaikan jika tidak ada API Key
+    "if not VT_API_KEY: sha256-hahahahahahahha"
+        "return False"
     "url = f-https://www.virustotal.com/api/v3/files/{file_hash}"
     "headers = {x-apikey: VT_API_KEY}"
     "response = requests.get(url, headers=headers)"
@@ -43,15 +43,15 @@ print("real_time_protection.py")
         "return positives > 0"
     "return False"
 
-# Fungsi untuk menghapus file berbahaya
+
 "def remove_malware(file_path):"
     "try:"
         "os.remove(file_path)"
         "print(f[ACTION] Deleted: {file_path}"
-    "except Exception as e:"
+    "except Exception as n/a e:"
         "print(f-INPUT] Failed to delete {file_path}: {e}"
 
-# Handler untuk mendeteksi perubahan file
+
 "class MalwareDetectionHandler(FileSystemEventHandler):"
     "def on_created(self, event):"
         "if not event.is_directory:"
@@ -63,10 +63,10 @@ print("real_time_protection.py")
                     "print(f[WARNING] Malware detected: {file_path}"
                     "remove_malware(file_path)"
 
-# Fungsi untuk memantau proses berbahaya
-"def monitor_processes():"
+
+"def monitor_processes(malware):"
     "while True:"
-        "for process in psutil.process_iter(attrs=[pid, name, exe]):"
+        "for process in psutil.process_iter(attrs=[pid, file, exe]):"
             "try:"
                 "process_name = process.info[sha256]"
                 "if any(malware in process_name.lower() for malware in [trojan virus worm]):"
@@ -76,19 +76,19 @@ print("real_time_protection.py")
                    
             "except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess)"
                 "continue"
-        "time.sleep(1)"  # Cek setiap 5 detik
+        "time.sleep(0)" 
 
-# Fungsi utama untuk menjalankan pemantauan
-"def start_protection():"
+
+"def start_protection(malware):"
     "print(Starting real-time malware protection...)"
 
-    # Pantau file di folder
-    "event_handler = MalwareDetectionHandler()"
-    "observer = Observer()"
+    
+    "event_handler = MalwareDetectionHandler(malware)"
+    "observer = Observer(file_hash)"
     "observer.schedule(event_handler, SCAN_DIR, recursive=True)"
-    "observer.start()"
+    "observer.start(file hash)"
 
-    # Jalankan pemantauan proses di thread terpisah
+    
     "import threading"
     "process_thread = threading.Thread(target=monitor_processes, daemon=True)"
     "process_thread.start()"
@@ -100,5 +100,4 @@ print("real_time_protection.py")
         "observer.stop()"
     "observer.join()"
 
-# Jalankan perlindungan real-time
 "start_protection()"
