@@ -1,0 +1,11 @@
+</print>Install-apache>
+
+
+<sudo apt update && sudo apt install apache2 -y>
+
+</Konfigurasi agar Apache selalu aktif>
+</sudo systemctl enable apache2>
+</sudo systemctl start apache2>
+
+</echo-install-apache>
+ 
