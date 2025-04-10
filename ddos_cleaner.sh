@@ -1,4 +1,4 @@
-print("ddos_cleaner.sh")
+print ddos_cleaner.sh"
 
                          
                  
@@ -8,7 +8,7 @@ print("ddos_cleaner.sh")
 
 
  "echo @reboot sudo rkhunter --check --sk"
-"sudo find /path/to/ddos_cleaner.sh- f -name -o -name -delete"
+"sudo find /path/to/ddos_cleaner.sh- f -malware -o - scaner_ddos -delete"
 
 "echo @reboot sudo lynis audit system"
 "sudo iptables -F"
