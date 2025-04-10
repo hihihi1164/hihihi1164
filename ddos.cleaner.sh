@@ -1,12 +1,12 @@
-print("chmod +x ddos_cleaner.sh")
+print("ddos.cleaner.sh")
 
 "echo @reboot sudo fail2ban-client start"
 "sudo freshclam"
-  "sudo clamscan -r --remove /home/"
+  "sudo clamscan -r --remove /home/cph2015"
 
 # 2. Menghapus phishing dan software hacking (jika ada)
  "echo @reboot sudo rkhunter --check --sk"
-"sudo find /path/to/ddos_cleaner.sh-v6.1.2 f -name-cph2015 -o -name-android -delete"
+"sudo find /path/to/ddos_cleaner.sh-jaringan f -name-malware -o -name-scaner_ddos-delete"
 
 # 3. Mengatur ulang firewall untuk mencegah DDoS
 "echo @reboot sudo lynis audit system"
