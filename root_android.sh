@@ -17,7 +17,7 @@ echo="/root_android.sh"
      echo="/root_android.sh"
 "fastboot flash boot magisk_patched.img"
 
-    echo="/root_android.sh">
+    echo="/root_android.sh"
              "fastboot reboot"
 
         echo="/root_android.sh"
