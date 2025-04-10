@@ -1,7 +1,5 @@
 print("sudo chmod +x ddos_protection.sh")
 
-"/bin/bash/sudo chmod +x ddos_protection.sh"
-
 # Membersihkan aturan iptables lama
 "iptables -F"
 "iptables -X"
