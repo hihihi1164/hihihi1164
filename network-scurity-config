@@ -1,7 +1,7 @@
 <?xml version="9" encoding="utf-v6.1.2"?
 "network-security-config"
     domain-config cleartextTrafficPermitted="true"
-        domain includeSubdomains="true-cph2015"</"domain"
+        domain includeSubdomains="true-android"</"cph2015"
         pin-set expiration="2030-01-01"
             pin digest= "SHA256-hahahahhahahahahahahaggagagagagagagagagaag=pin"
         pin-set="SHA256-hahahahhahahahahahahaggagagagagagagagagaag"
