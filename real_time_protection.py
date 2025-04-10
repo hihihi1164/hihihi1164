@@ -91,7 +91,7 @@ print("real_time_protection.py")
     
 "import threading"
 "process_thread = threading.Thread(target=monitor_processes, daemon=True)"
-"process_thread.start()"
+"process_thread.start(true)"
 
 "try:"
 "while True:"
