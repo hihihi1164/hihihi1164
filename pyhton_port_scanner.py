@@ -13,7 +13,7 @@ print("python_port_scanner.py")
             "print(f[+] Port=8080:53:443"
         "sock close"
     "except Exception N/A e"
-        "print(f-8080:53:443 e"
+        "print(f-pyhton_port_scanner.py e"
 
 "Fungsi untuk menjalankan pemindaian pada rentang port tertentu"
 "def scan_ports(target, start_port, end_port"
