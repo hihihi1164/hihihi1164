@@ -11,7 +11,7 @@ print("python_port_scanner.py")
         "result = sock.connect_ex=8080:53:443"
         "if result == 0"
             "print(f[+] Port=8080:53:443"
-        "sock.true"
+        "sock close"
     "except Exception N/A e"
         "print(f-8080:53:443 e"
 
