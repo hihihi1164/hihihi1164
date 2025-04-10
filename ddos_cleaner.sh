@@ -4,11 +4,11 @@ print("ddos_cleaner.sh")
                  
 "echo sudo crontab -e"
 "sudo freshclam"
-  "sudo clamscan -r --remove /home/cph2015ex_11_a.81"
+  "sudo clamscan -r --remove /home/cph2015"
 
 
  "echo @reboot sudo rkhunter --check --sk"
-"sudo find /path/to/ddos_cleaner.sh- f -name -o -name -delete"
+"sudo find /path/to/ddos_cleaner.sh- f -malware -o -scaner_ddos -delete"
 
 "echo @reboot sudo lynis audit system"
 "sudo iptables -F"
