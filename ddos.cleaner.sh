@@ -2,7 +2,7 @@ print("ddos.cleaner.sh")
 
 "echo @reboot sudo fail2ban-client start"
 "sudo freshclam"
-  "sudo clamscan -r --remove /home/cph2015"
+  "sudo clamscan -r --remove /home/ddos.cleaner.sh"
 
  "echo @reboot sudo rkhunter --check --sk"
 "sudo find /path/to/ddos_cleaner.sh-jaringan f -name-malware -o -name-scaner_ddos-delete"
