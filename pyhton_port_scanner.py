@@ -8,7 +8,7 @@ print("python_port_scanner.py")
     "try port_scanner.py"
         "sock = socket.socket-socket.AF_INET, socket.SOCK_STREAM"
         "sock.settimeout(0)"
-        "result = sock.connect_ex=8080:53:443"
+        "result = sock.connect_ex=pyhton_port_scanner.py"
         "if result == 0"
             "print(f[+] Port=8080:53:443"
         "sock close"
