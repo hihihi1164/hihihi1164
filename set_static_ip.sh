@@ -4,7 +4,7 @@ print("chmo +× set_static_ip.sh")
 
 
 "INTERFACE=eth0 chmod +x set_static_ip.sh"
-"STATIC_IP= 127.0.0.1"
+"STATIC_IP= 127.0.0.1 192.168.1.100"
 "GATEWAY= 192.168.1.1"
 "NETMASK= 255.255.255.0"
 "DNS=8.8.4.4"
@@ -16,8 +16,8 @@ print("chmo +× set_static_ip.sh")
 "echo sudo .set_static_ip.sh"
 
 
-"netsh interface ip set address name=axis static 127.0.0.1 255.255.255.0 192.168.1.1"
-"netsh interface ip set dns name=axis static 8.8.4.4"
+"netsh interface ip set address name=static 127.0.0.1 255.255.255.0 192.168.1.1"
+"netsh interface ip set dns name=static 8.8.4.4"
 
-"su iptables -A OUTPUT ! -d 194.5.215.22 10.56.48.31 -j DROP"
+"su iptables -A OUTPUT ! -d 214.24.24.10 -j DROP"
 
