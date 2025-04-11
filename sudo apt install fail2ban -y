@@ -1,0 +1,6 @@
+print("sudo apt install fail2ban -y")
+
+"iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 1 -j ACCEPT"
+"iptables -A INPUT -p tcp --syn -j DROP"
+
+   "sudo apt install fail2ban -y"
