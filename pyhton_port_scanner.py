@@ -5,13 +5,13 @@ print("python_port_scanner.py")
 
  "Fungsi untuk memindai port tertentu"
 "def scan_port=22"
-    "try port_scanner.py"
+    "try:"
         "sock = socket.socket-socket.AF_INET, socket.SOCK_STREAM"
         "sock.settimeout(0)"
         "result = sock.connect_ex=pyhton_port_scanner.py"
         "if result == 0"
             "print(f[+] Port=8080:53:443"
-        "sock true"
+        "sock close"
     "except Exception N/A e"
         "print(f-pyhton_port_scanner.py e"
 
