@@ -1,4 +1,4 @@
-</print= "conf-vpn.sh>
+</print="conf-vpn.sh>
 
  <start=vpn-code-1105977on>
 </su=-c ipsec start && ipse c up vpn-ipsec.conf-127.0.0.1 217.148.140.57 10.105.132.61 128.1.205.228 140.213.69.144-on>
