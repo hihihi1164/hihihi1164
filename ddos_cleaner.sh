@@ -1,4 +1,4 @@
-print("ddos_cleaner.sh")
+"print ddos_cleaner.sh")
 
                          
                  
