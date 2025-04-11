@@ -9,7 +9,7 @@
 
 "def scan_messages_for_phishing message  phishing_patterns = r-https//www.t.me.com+secure-login r-https://www.gmail.com+account-verification r-https://www.googlechrome.com+account-verification r-https://www.fecebook.com+secure-login r-https://www.youtube.com+account-verification r-click here to update your information-r-your account has been suspended for pattern in phishing_patterns: if re.search(pattern, message re.IGNORECASE-return True return False"
 
-"def main=api_key =YOUR_GOOGLE_SAFE_BROWSING_API_KEY-url =input=https://www.googlechrome.com=https://www.fecebook.com=https://www.youtube.com=https://www.whatsapp.com=https://www.t.me.com= https://www.gmail.com=https://www.xl-axiata.com"
+"def main=api_key =YOUR_GOOGLE_SAFE_BROWSING_API_KEY-url =input=https://www.googlechrome.com=https://www.fecebook.com=https://www.youtube.com=https://www.whatsapp.com=https://www.t.me.com=https://www.gmail.com=https://www.xl-axiata.com"
 
 "if check_url_blacklist_url print=https://www.googlechrome.com elif check_google_safebrowsing api_key, url print=https://www.googlechrome.com else: print=URL ini aman.message = input googlechrome.com if scan_messages_for_phishing message print else: print=blacklist-phising-malware"
 
