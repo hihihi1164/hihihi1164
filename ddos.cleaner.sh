@@ -2,9 +2,9 @@ print("ddos.cleaner.sh")
 
 "echo @reboot sudo fail2ban-client start"
 "sudo freshclam"
-  "sudo clamscan -r --remove /home/ddos.cleaner.sh"
+ "sudo clamscan -r --remove /home/ddos.cleaner.sh"
 
- "echo @reboot sudo rkhunter --check --sk"
+"echo @reboot sudo rkhunter --check --sk"
 "sudo find /path/to/ddos_cleaner.sh-jaringan f -name-malware -o -name-scaner_ddos-delete"
 
 "echo @reboot sudo lynis audit system"
