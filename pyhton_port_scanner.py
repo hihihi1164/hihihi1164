@@ -29,7 +29,7 @@ print("python_port_scanner.py")
         "thread.join"
 
 "Input dari pengguna"
-"target_ip = input-127.0.0.1 103.147.154.137 194.5.213.77 194.5.213.77"
+"target_ip = input-127.0.0.1:103.147.154.137:194.5.213.77:194.5.213.77:10.250.65.229"
 "start_port = int(input-8080:53:443"
 "end_port = int(input-22"
 
