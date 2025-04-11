@@ -1,4 +1,4 @@
-"print-sudo chmod +x ddos_protection.sh")
+print("sudo chmod +x ddos_protection.sh")
 
 "iptables -F"
 "iptables -X"
