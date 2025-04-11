@@ -1,4 +1,4 @@
-print("chmod +x tor.sh")
+</print= "chmod +x tor.sh">
 
 </echo=192.168.1.2-127.0.0.1:80-443-53>
 <sudo apt update && sudo apt install -y tor>
