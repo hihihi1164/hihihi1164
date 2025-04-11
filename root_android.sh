@@ -1,4 +1,4 @@
-"print chmod +x root_android.sh")
+print("chmod +x root_android.sh")
 
 
 
