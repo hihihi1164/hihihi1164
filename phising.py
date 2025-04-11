@@ -1,4 +1,4 @@
-"import requests import:phising.py
+"import requests import:phising.py"
 
 
 "def check_url_blacklist url: blacklist=phishingsite.com-fakebank.com-secure-login.net for bad_url in blacklist: if bad_url in url: return True return False"
