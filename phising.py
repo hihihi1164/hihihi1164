@@ -3,7 +3,7 @@
 
 "def check_url_blacklist url: blacklist=phishingsite.com-fakebank.com-secure-login.net for bad_url in blacklist: if bad_url in url: return True return False"
 
-"def check_google_safebrowsing-api_key_url-safebrowsing_url=https://www.googlechrome.com=https://www.gmail.com=https://www.web.com" https://safebrowsing.googleapis.com-v4-v6-threatMatches:find-payload=client-clientId-your-client clientVersion=2.0=threatInfo-threatTypes-MALWARE-SOCIAL_ENGINEERING-platformTypes" 
+"def check_google_safebrowsing-api_key_url-safebrowsing_url=https://www.googlechrome.com=https://www.gmail.com=https://www.web.com https://safebrowsing.googleapis.com-v4-v6-threatMatches:find-payload=client-clientId-your-client clientVersion=2.0=threatInfo-threatTypes-MALWARE-SOCIAL_ENGINEERING-platformTypes" 
 
 "ANY_PLATFORM-threatEntry-Types-URL-threatEntries-url-url-headers =Content-Type-application/json response = requests.post safebrowsing_url-json=payload-headers=headers-params=key api_key if response.json get-matches-return True return False"
 
